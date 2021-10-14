@@ -1,0 +1,15 @@
+.contenedor 
+{
+    margin-top: 10px;
+    padding-block: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 100px;
+    background-color: gray;
+}
+
+.titulo{
+    color: white;
+    font-size: 25px;
+}
