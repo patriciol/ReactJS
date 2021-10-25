@@ -5,8 +5,8 @@ function App() {
   return (
     <>
     <NavBar />
-    <ItemListContainer greeting="Hola soy el mensaje 1"/> 
-    <ItemListContainer greeting="Hola soy el mensaje 2"/>
+    <ItemListContainer nombre="Producto 1" stock="5"/>
+    <ItemListContainer nombre="Producto 2" stock="3"/> 
     </>
   );
 }
