@@ -1,5 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
+import "./Estilos.css"
+
+
 export default function ItemCount(props) {
 
     const [cantidad, setCantidad] = useState(0)
@@ -32,11 +35,15 @@ export default function ItemCount(props) {
 
 
     return (
+
         <>
-            <button onClick={restar}>-</button>
-            <input type="text" value={cantidad} />
-            <button onClick={sumar}>+</button>
+            <div className="botones">
+                <button onClick={restar}>-</button>
+                <input className="input" type="text" value={cantidad} />
+                <button onClick={sumar}>+</button>
+            </div>
             <button onClick={comprar}>Agregar a Carrito</button>
         </>
+
     )
 }
