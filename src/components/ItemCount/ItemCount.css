@@ -1,0 +1,25 @@
+.inputCantidad{
+    width: 40%;
+    text-align: center;
+    font-size: 70%;
+
+}
+
+.contendorBotones{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btnSumaResta{
+    align-self: center;
+    text-align: end;
+    font-weight: bold;
+    font-size: 70%;
+
+}
+
+.btnComprar{
+    font-size: 80%;
+}

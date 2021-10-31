@@ -1,11 +1,13 @@
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/containers/ItemListContainer';
-
+import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 function App() {
   return (
     <>
     <NavBar />
-    <ItemListContainer /> 
+    <ItemListContainer/>
+    <h1>Tarjeta de detalle:</h1> 
+    <ItemDetailContainer/>
     </>
   );
 }

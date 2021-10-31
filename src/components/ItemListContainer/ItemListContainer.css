@@ -1,0 +1,7 @@
+.contenedorItems{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2%;
+    grid-row-gap: 10px;
+
+}

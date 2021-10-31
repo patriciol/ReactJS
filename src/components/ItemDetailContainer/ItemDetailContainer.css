@@ -1,0 +1,11 @@
+.contenedorDetalle{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 70%;
+
+    justify-content: space-between;
+
+    padding: 4%;
+    border: solid 1px black;
+}

@@ -1,0 +1,28 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    background-color: grey;
+
+    width: 90%;
+    padding: 1%; 
+
+    margin: 0 auto;
+}
+
+.fotoCard{
+    width: 90% ;
+    margin: 0 auto;
+    height: 150px;
+}
+
+.tituloCard{
+    color: white;
+    font-size: 120%;
+}
+
+.descCard{
+    font-size: 80%;
+}
