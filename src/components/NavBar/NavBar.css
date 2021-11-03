@@ -7,6 +7,10 @@
     flex-direction: row;
     justify-content: space-between;
     background-color:RGB(255,140,161);
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+
 }
 
 .logoNav{
@@ -33,4 +37,18 @@ width: 30%;
 .carrito{
     width: 30px;
     height: 30px;
+}
+
+.btnNav{
+    background-color: white;
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.btnNavActive{
+    background-color:red;
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
 }

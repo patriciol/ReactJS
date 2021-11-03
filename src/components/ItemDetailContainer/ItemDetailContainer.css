@@ -1,11 +1,13 @@
-.contenedorDetalle{
+.contenedorDetalle {
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
-    width: 70%;
+    width: 60%;
 
     justify-content: space-between;
 
-    padding: 4%;
-    border: solid 1px black;
+    padding: 1%;
+    border: 1px solid black;
+
+    background-color: rgb(3, 193, 140);
+    margin: 2% auto;
 }

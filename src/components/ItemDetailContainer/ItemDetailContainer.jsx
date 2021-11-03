@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useParams } from 'react-router'
 import { getItem } from '../../Services/getItem'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import './ItemDetailContainer.css'
@@ -7,23 +8,35 @@ import './ItemDetailContainer.css'
 function ItemDetailContainer() {
 
 
-    const [detalle, setDetalle] = useState({})
+    const [detalle, setDetalle] = useState([])
     const [loading, setLoading] = useState(true)
 
+   
+    const { Id } = useParams();
+
     useEffect(() => {
+
+
         getItem
-            .then(res => setDetalle(res))
+
+            .then(res => setDetalle(res.find(prod => prod.id === Id)))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
-    }, [])
 
 
 
+    },[Id])
 
+
+
+    console.log(loading)
     return (
         <div className="contenedorDetalle">
+            
             {
-                loading ? <h5>Cargando Detalle..</h5>: <ItemDetail detalle={detalle}/>
+
+
+                loading ? <h5>HOLAAAAAACargando Detalle..</h5> : <ItemDetail detalle={detalle} />
             }
 
         </div>

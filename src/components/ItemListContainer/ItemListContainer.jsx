@@ -1,4 +1,5 @@
-import {useState,useEffect} from 'react'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router'
 import { getData } from '../../Services/getData'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
@@ -7,21 +8,39 @@ import './ItemListContainer.css'
 
 function ItemListContainer() {
 
-//Mock con Pomise
-const [productos,setProductos]=useState([])
-const [loading,setLoading]=useState(true)
+    //Mock con Pomise
+    const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
 
-useEffect(() => {
-    getData
-    .then(res => setProductos(res))
-    .catch(err => console.log(err))
-    .finally(()=>setLoading(false))
-}, [])
+    const { categoryId } = useParams();
+
+    useEffect(() => {
+
+        if (categoryId) {
+
+            getData
+                .then(res => setProductos(res.filter(prod => prod.categoria === categoryId)))
+                .catch(err => console.log(err))
+                .finally(() => setLoading(false))
+
+
+        }
+        else {
+
+            getData
+                .then(res => setProductos(res))
+                .catch(err => console.log(err))
+                .finally(() => setLoading(false))
+
+        }
+    }, [categoryId])
+
+
 
 
     return (
         <div className="contenedorItems">
-        {loading ? <h5>Cargando...</h5> : <ItemList productos={productos}/>}             
+            {loading ? <h5>Cargando...</h5> : <ItemList productos={productos} />}
         </div>
     )
 }

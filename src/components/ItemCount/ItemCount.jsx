@@ -40,9 +40,8 @@ function ItemCount({ detalle }) {
                 <input className="inputCantidad" type="text" value={cantidad} />
                 <button className="btnSumaResta" onClick={sumar}>+</button>
             </div>
-            <div>
-                <button className="btnComprar" onClick={comprar}>Agregar a carrito</button>
-            </div>
+            <button className="btnComprar" onClick={comprar}>Agregar</button>
+
 
         </>
     )
