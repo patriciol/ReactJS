@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import './ItemCount.css'
+import { Link } from 'react-router-dom'
 
-function ItemCount({ detalle }) {
+function ItemCount({ detalle, onAdd }) {
 
 
     /*     Creo mi hook de estado para la cantidad a comprar del producto */
@@ -26,9 +27,19 @@ function ItemCount({ detalle }) {
 
     const comprar = () => {
 
-        cantidad === 0 ? alert('Primero debe elegir la cantidad') : alert(`Agregar ${cantidad} unidades de ${detalle.nombre}`)
+        if (cantidad === 0)
+        { alert('Primero debe elegir la cantidad') }
+        else {
+            alert(`Agregar ${cantidad} unidades de ${detalle.nombre}`)
+            onAdd(cantidad)
+            setcompraRealizada(true)
+        }
+
+
 
     }
+
+    const [compraRealizada, setcompraRealizada] = useState(false)
 
 
     return (
@@ -40,7 +51,13 @@ function ItemCount({ detalle }) {
                 <input className="inputCantidad" type="text" value={cantidad} />
                 <button className="btnSumaResta" onClick={sumar}>+</button>
             </div>
-            <button className="btnComprar" onClick={comprar}>Agregar</button>
+
+            {
+                compraRealizada ? <Link to="/cart"><button className="btnComprar">Ir a carrito</button></Link> :
+                    <button className="btnComprar" onClick={comprar}>Agregar</button>
+
+            }
+
 
 
         </>
