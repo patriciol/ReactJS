@@ -6,7 +6,7 @@ function ItemList({productos}) {
         <>
 
             {
-                productos.map(prod => <Item key={prod.id} producto={prod} />)
+                productos.map(prod => <Item key={prod.id} detalle={prod} />)
             }
         </>
     )

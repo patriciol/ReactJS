@@ -29,7 +29,6 @@ function ItemDetailContainer() {
 
 
 
-    console.log(loading)
     return (
         <div className="contenedorDetalle">
             

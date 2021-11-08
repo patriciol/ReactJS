@@ -1,0 +1,10 @@
+.contenedorCarrito{
+    width: 90%;
+    padding: 4px;
+
+    min-height: 140px ;
+    margin: 20px auto;
+    background-color: grey;
+    border-radius: 10px;
+    text-align: center;
+}

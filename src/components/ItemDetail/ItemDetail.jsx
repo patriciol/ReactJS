@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../CarContext/CarContext'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 
@@ -7,12 +8,14 @@ import './ItemDetail.css'
 function ItemDetail({ detalle }) {
 
     const [cantidad, setCantidad] = useState(0)
+    const { addItem} = useCartContext();
 
-     const onAdd = (count) => {
+    const onAdd = (count) => {
         setCantidad(count)
+        addItem( { detalle , cantidad: count })
     }
 
-    console.log(cantidad)
+
 
 
     return (
