@@ -11,6 +11,7 @@ function CartList() {
         clear()
     }
 
+
     
     return (
         <>
@@ -20,7 +21,7 @@ function CartList() {
 
                 {
                     (cartList.length > 0)
-                        ? cartList.map(prod => <CartItem prod={prod} />)
+                        ? cartList.map(prod => <CartItem prod={prod}/>)
                         : <div>Carrito Vacio</div>
 
                 }

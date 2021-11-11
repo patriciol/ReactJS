@@ -1,24 +1,23 @@
 import React,{useEffect} from 'react'
 import { useCartContext, } from '../CarContext/CarContext'
-import { Link } from 'react-router-dom'
-function CartItem({ prod}) {
 
-   
 
-     const { removeItem } = useCartContext();
- 
-     const eliminar = () => {
+function CartItem({ prod }) {
+
+  const eliminar = () => {
         removeItem(prod)
 
     } 
+
+     const { removeItem } = useCartContext();
+ 
+
 
     return (
         <>
 
             <div>
-                <p>id {prod.detalle.nombre} y cantidad {prod.cantidad}</p>
-                <Link to="/cart"><button onClick={eliminar}>borrar</button></Link>
-
+                <p> {prod.detalle.nombre}: {prod.cantidad} unidades</p>
             </div>
         </>
     )

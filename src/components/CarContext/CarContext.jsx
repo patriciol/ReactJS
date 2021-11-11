@@ -45,7 +45,7 @@ const CartContextProvider = ({ children }) => {
     }
 
 
-    function clear(items) {
+    function clear() {
 
         setCartList([])
 

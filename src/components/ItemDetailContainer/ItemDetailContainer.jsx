@@ -23,8 +23,6 @@ function ItemDetailContainer() {
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
 
-
-
     },[Id])
 
 
@@ -33,9 +31,7 @@ function ItemDetailContainer() {
         <div className="contenedorDetalle">
             
             {
-
-
-                loading ? <h5>HOLAAAAAACargando Detalle..</h5> : <ItemDetail detalle={detalle} />
+                loading ? <h5>Cargando Detalle..</h5> : <ItemDetail detalle={detalle} />
             }
 
         </div>
