@@ -1,6 +1,6 @@
-import React,{useEffect} from 'react'
-import { useCartContext, } from '../CarContext/CarContext'
-
+import React from 'react'
+import { useCartContext } from '../CarContext/CarContext'
+import './CartItem.css'
 
 function CartItem({ prod }) {
 
@@ -16,8 +16,8 @@ function CartItem({ prod }) {
     return (
         <>
 
-            <div>
-                <p> {prod.detalle.nombre}: {prod.cantidad} unidades</p>
+            <div className="detalleItemCarrito">
+                <p className="detalleCarrito"> {prod.detalle.nombre}: {prod.cantidad} unidades a {prod.detalle.precio}$ --Total producto: {prod.detalle.precio*prod.cantidad}$</p> <button className="borrarItem" onClick={eliminar}>X</button>
             </div>
         </>
     )

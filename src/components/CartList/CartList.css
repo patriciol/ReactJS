@@ -1,10 +1,24 @@
 .contenedorCarrito{
     width: 90%;
     padding: 4px;
-
     min-height: 140px ;
     margin: 20px auto;
     background-color: grey;
     border-radius: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.botonera{
+    width: 35%;
+    font-size: 60%;
+    bottom: 0;
+    margin: 7px auto;
+    background-color: grey;
+    border-color: grey;
+    color: white;
     text-align: center;
 }

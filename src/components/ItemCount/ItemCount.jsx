@@ -30,8 +30,8 @@ function ItemCount({ detalle, onAdd }) {
         if (cantidad === 0)
         { alert('Primero debe elegir la cantidad') }
         else {
-            alert(`Agregar ${cantidad} unidades de ${detalle.nombre}`)
-            onAdd(cantidad)
+/*             alert(`Agregar ${cantidad} unidades de ${detalle.nombre}`)
+ */            onAdd(cantidad)
             setcompraRealizada(true)
         }
 
