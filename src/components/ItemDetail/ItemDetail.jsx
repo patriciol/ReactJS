@@ -12,7 +12,7 @@ function ItemDetail({ detalle }) {
 
     const onAdd = (count) => {
         setCantidad(count)
-        addItem( { detalle , cantidad: count })
+        return addItem( { detalle , cantidad: count })
     }
 
 

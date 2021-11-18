@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
-import { render } from 'react-dom'
 import { useParams } from 'react-router'
-import { getData } from '../../Services/getData'
 import { getFirestore } from '../../Services/getFirestore'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
@@ -17,23 +15,49 @@ function ItemListContainer() {
     const { categoryId } = useParams();
 
     useEffect(() => {
+        const db = getFirestore()
+        
 
-        if (categoryId) {
-     
-      getData
-          .then(res => setProductos(res.filter(prod => prod.categoria === categoryId)))
-          .catch(err => console.log(err))
-          .finally(() => setLoading(false))
-          
-  }
-  else {
+        if(categoryId)
+        {
+            const dbQuery = db.collection('items').where('categoria','==',categoryId).get()
 
-      getData
-          .then(res => setProductos(res))
-          .catch(err => console.log(err))
-          .finally(() => setLoading(false))
+            
+            dbQuery
+            .then(resp => setProductos(resp.docs.map(prod => ({ id: prod.id, ...prod.data() }))))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
 
-  }
+        }
+        else
+        {
+
+            const dbQuery = db.collection('items').orderBy("categoria", "desc").get()
+
+            dbQuery
+            .then(resp => setProductos(resp.docs.map(prod => ({ id: prod.id, ...prod.data() }))))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+
+        }
+
+
+        /*  if (categoryId) {
+    
+             getData
+                 .then(res => setProductos(res.filter(prod => prod.categoria === categoryId)))
+                 .catch(err => console.log(err))
+                 .finally(() => setLoading(false))
+    
+         }
+         else {
+    
+             getData
+                 .then(res => setProductos(res))
+                 .catch(err => console.log(err))
+                 .finally(() => setLoading(false))
+    
+         } */
 
     }, [categoryId])
 

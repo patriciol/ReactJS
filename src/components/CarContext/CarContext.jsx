@@ -15,23 +15,44 @@ const CartContextProvider = ({ children }) => {
     const [cartList, setCartList] = useState([])
 
 
+
     function addItem(items) {
 
 
         const agregado = isInCart(items)
+
+
 
         if (!agregado) {
             setCartList([
                 ...cartList,
                 items
             ])
+
+            return true;
+
         }
         else {
 
             let posicion = cartList.findIndex(prod => prod.detalle.id === items.detalle.id)
 
-            cartList[posicion].cantidad = cartList[posicion].cantidad + items.cantidad
-            setCartList(cartList)
+            if ((cartList[posicion].cantidad + items.cantidad) > items.detalle.stock) {
+                alert("Stock Maximo es: " + items.detalle.stock + ". Ya tienes " + cartList[posicion].cantidad + " unidades en el carrito" )
+                setCartList(cartList)
+
+                return false;
+
+            }
+            else {
+                cartList[posicion].cantidad = cartList[posicion].cantidad + items.cantidad
+                setCartList([...cartList])
+                return true;
+
+
+            }
+
+
+
 
         }
 
@@ -72,11 +93,11 @@ const CartContextProvider = ({ children }) => {
         return totalCarrito;
     }
 
-    function cantidadItems(){
+    function cantidadItems() {
         let totalItems = cartList.reduce((total, prod) => {
             return (prod.cantidad + total);
         }, 0)
-    
+
         return totalItems;
     }
 

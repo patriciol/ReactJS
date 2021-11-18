@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './ItemCount.css'
 import { Link } from 'react-router-dom'
 
+
 function ItemCount({ detalle, onAdd }) {
 
 
@@ -27,17 +28,21 @@ function ItemCount({ detalle, onAdd }) {
 
     const comprar = () => {
 
-        if (cantidad === 0)
-        { alert('Primero debe elegir la cantidad') }
+        if (cantidad === 0) { alert('Primero debe elegir la cantidad') }
         else {
-/*             alert(`Agregar ${cantidad} unidades de ${detalle.nombre}`)
- */            onAdd(cantidad)
-            setcompraRealizada(true)
-        }
+            /*             alert(`Agregar ${cantidad} unidades de ${detalle.nombre}`)
+             */
+
+            setcompraRealizada(onAdd(cantidad)) 
+
+ /*          setcompraRealizada(true)
+ */        }
 
 
 
     }
+
+
 
     const [compraRealizada, setcompraRealizada] = useState(false)
 

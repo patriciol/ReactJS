@@ -13,7 +13,7 @@ function Item({ detalle }) {
 
     const onAdd = (count) => {
         setCantidad(count)
-        addItem({ detalle, cantidad: count })
+        return addItem({ detalle, cantidad: count })
 
     }
 
@@ -25,6 +25,7 @@ function Item({ detalle }) {
             <img className="fotoCard" src={detalle.foto} alt={detalle.nombre} />
             <Link to={`/item/${detalle.id}`}><button className="btnDescripcion">Descripcion</button></Link>
             <span className="precioCard">Precio por unidad: ${detalle.precio}</span>
+            <span className="precioCard">Stock: {detalle.stock}</span>
             <ItemCount detalle={detalle} onAdd={onAdd} />
         </div>
     )
