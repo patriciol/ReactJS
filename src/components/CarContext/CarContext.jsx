@@ -1,5 +1,4 @@
-import { render } from '@testing-library/react'
-import { createContext, useState, useContext, useEffect } from 'react'
+import { createContext, useState, useContext} from 'react'
 
 //creo el context
 const CartContext = createContext()
@@ -62,7 +61,7 @@ const CartContextProvider = ({ children }) => {
         /* 
                 let posicion = cartList.findIndex(prod => prod.detalle.id === items.detalle.id)
                 cartList.splice(posicion, 1) */
-        setCartList(cartList.filter(prod => prod.detalle.id != items.detalle.id))
+        setCartList(cartList.filter(prod => prod.detalle.id !== items.detalle.id))
     }
 
 

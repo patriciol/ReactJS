@@ -7,8 +7,8 @@ import './ItemDetail.css'
 
 function ItemDetail({ detalle }) {
 
-    const [cantidad, setCantidad] = useState(0)
     const { addItem} = useCartContext();
+    const [cantidad, setCantidad] = useState(0)
 
     const onAdd = (count) => {
         setCantidad(count)

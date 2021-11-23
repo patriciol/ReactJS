@@ -33,7 +33,7 @@ function ItemCount({ detalle, onAdd }) {
             /*             alert(`Agregar ${cantidad} unidades de ${detalle.nombre}`)
              */
 
-            setcompraRealizada(onAdd(cantidad)) 
+            setcompraRealizada(onAdd(cantidad))
 
  /*          setcompraRealizada(true)
  */        }
@@ -52,16 +52,16 @@ function ItemCount({ detalle, onAdd }) {
 
             <div className="contendorBotones">
 
-                <button className="btnSumaResta" onClick={restar}>-</button>
-                <input className="inputCantidad" type="text" value={cantidad} />
-                <button className="btnSumaResta" onClick={sumar}>+</button>
-            </div>
+                <button className="btnSumaResta" onClick={restar} >-</button>
+            <input className="inputCantidad" type="text" value={cantidad} onChange={(event) => this.inputChangedHandler(event)} />
+            <button className="btnSumaResta" onClick={sumar}>+</button>
+        </div>
 
             {
-                compraRealizada ? <Link to="/cart"><button className="btnComprar">Ir a carrito</button></Link> :
-                    <button className="btnComprar" onClick={comprar}>Agregar</button>
+        compraRealizada ? <Link to="/cart"><button className="btnComprar">Ir a carrito</button></Link> :
+            <button className="btnComprar" onClick={comprar}>Agregar</button>
 
-            }
+    }
 
 
 

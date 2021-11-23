@@ -14,7 +14,7 @@ function CartWidget() {
         
         <>
         <div className="contenedorCartWidget" style={{visibility: cantidadItems()>0 ? 'visible' : 'hidden'}}>
-        <Link to="/cart"><img className="carrito" src="../assets/image/carrito.png" /></Link>
+        <Link to="/cart"><img className="carrito" src="../assets/image/carrito.png" alt="carrito"/></Link>
         <h5 className="contador">{cantidadItems()}</h5>
         </div>
         </>

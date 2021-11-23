@@ -1,7 +1,7 @@
-.contenedorCarrito{
+.contenedorCarrito {
     width: 90%;
     padding: 4px;
-    min-height: 140px ;
+    min-height: 140px;
     margin: 20px auto;
     background-color: grey;
     border-radius: 10px;
@@ -12,7 +12,7 @@
     justify-content: space-between;
 }
 
-.botonera{
+.botonera {
     width: 35%;
     font-size: 60%;
     bottom: 0;
@@ -21,4 +21,13 @@
     border-color: grey;
     color: white;
     text-align: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    font-size: 50%;
+    justify-content: center;
+    margin: 0 auto;
 }

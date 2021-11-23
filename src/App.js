@@ -9,32 +9,29 @@ import CartList from './components/CartList/CartList';
 function App() {
   return (
     <>
-
-
       <CartContextProvider>
-
         <BrowserRouter>
           <NavBar />
           <Switch>
+        
             <Route exact path="/">
               <ItemListContainer />
             </Route>
+        
             <Route exact path="/categoria/:categoryId" component={ItemListContainer} />
+        
             <Route exact path="/item/:Id" >
               <ItemDetailContainer />
             </Route>
+        
             <Route exact path="/cart">
               <CartList />
             </Route>
+        
           </Switch>
-
         </BrowserRouter>
-
       </CartContextProvider>
-
     </>
-
   );
 }
-
 export default App;
