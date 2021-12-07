@@ -18,15 +18,15 @@ Funcionalidades:
 -Finalizar la compra de los elementos cargados al mismo a través del llenado de un formulario de compra.
 -Finaliza guardando la orden de compra (devolviendo un ID de compra) en una base de datos del proyecto, alojada en Firebase.
 
-#### Tecnologia 
+### Tecnologia 
 React-Js - La App fue creada con Create React App
 Librerias externas
 
-##### Instalacion 
+### Instalacion 
 Para clonar el repositorio debe:
 git clone https://github.com/patriciol/ReactJS.git
 
-###### Complementos
+### Complementos
 Librerias externas utilizadas:
 
 react-router.dom : Es una librería que nos permite el enrutamiento y navegabilidad entre los diferentes componentes de nuestra SPA. 
@@ -44,6 +44,6 @@ npm install reactstrap react react-dom
 SweetAlert: libreria para mejorar las alertas utilizadas.
 npm install sweetalert --save
 
-###### Ejecucion 
+### Ejecucion 
 Luego de clonar el repositorio e instalar los complementos, ejecute en su consola de VSC:
 npm start
