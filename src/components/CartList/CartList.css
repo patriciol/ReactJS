@@ -1,5 +1,5 @@
 .contenedorCarrito {
-    width: 90%;
+    width: 60%;
     padding: 4px;
     min-height: 140px;
     margin: 20px auto;
@@ -13,7 +13,7 @@
 }
 
 .botonera {
-    width: 35%;
+    width: 100%;
     font-size: 60%;
     bottom: 0;
     margin: 7px auto;
@@ -21,13 +21,18 @@
     border-color: grey;
     color: white;
     text-align: center;
+
 }
 
-.formulario {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
+.btnCart{
+    margin-inline: 10px;
+}
+
+.labelForm{
+    font-size: 10px;
+}
+
+.inputForm{
+    height: 20px;
     font-size: 50%;
-    justify-content: center;
-    margin: 0 auto;
 }

@@ -1,50 +1,34 @@
-
-.contenedorNav 
-{
+.contenedorNav {
     padding: 5px 25px;
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color:RGB(255,140,161);
+    background-color: RGB(255, 140, 161);
     position: sticky;
     top: 0px;
     z-index: 3;
-
 }
 
-.logoNav{
+.logoNav {
     height: 100%;
     width: 100px;
 }
 
-.botonesNav{
-margin: auto 0;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-font-size: 10px;
-width: 30%;
-
+.botonesNav {
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 9px;
+    width: 30%;
+    font-family: 'Fraunces', serif;
 }
 
-
-.titulo{
-    color: white;
-    font-size: 25px;
-}
-
-
-.btnNav{
+.btnNav {
     background-color: white;
-    color: black;
-    font-size: 120%;
-    font-weight: bold;
-}
-
-.btnNavActive{
-    background-color:red;
-    color: black;
+    color:rgb(2,193,141);
+    border-radius: 20px;
     font-size: 120%;
     font-weight: bold;
 }

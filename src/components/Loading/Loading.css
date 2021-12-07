@@ -1,0 +1,26 @@
+.carga {
+    border: 3px solid hsla(185, 100%, 62%, 0.2);
+    border-top-color: #3cefff;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+.contenedorCarga {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.textoCarga {
+    width:100%;
+    text-align: center;
+}
