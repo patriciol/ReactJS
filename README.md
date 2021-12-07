@@ -5,10 +5,10 @@ Proyecto final E-commerce, Curso React-Js de CoderHouse. Año 2021
 
 https://pizzeriacoder.netlify.app
 
-![Image text](https://github.com/patriciol/ReactJS/blob/master/public/assets/image/demo1.jpg)
-![Image text](https://github.com/patriciol/ReactJS/blob/master/public/assets/image/demo2.jpg)
-![Image text](https://github.com/patriciol/ReactJS/blob/master/public/assets/image/demo3.jpg)
-![Image text](https://github.com/patriciol/ReactJS/blob/master/public/assets/image/demo4.jpg)
+![Image text](https://github.com/patriciol/ReactJS/blob/master/public/assets/image/demo1.JPG)
+![Image text](https://github.com/patriciol/ReactJS/blob/master/public/assets/image/demo2.JPG)
+![Image text](https://github.com/patriciol/ReactJS/blob/master/public/assets/image/demo3.JPG)
+![Image text](https://github.com/patriciol/ReactJS/blob/master/public/assets/image/demo4.JPG)
 
 ### Caracteristicas
 
